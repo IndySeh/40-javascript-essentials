@@ -7,11 +7,29 @@
 
 For anyone starting with Web Development, It is important to know the basics of JavaScript, but it can be confusing to figure out just where to start. That’s where this repository comes in. This repo will explain 40 of the most essential concepts that every developer should know to become a successful Javascript programmer. From data types and variables to functions and classes, this repository will cover the key concepts that one needs to know in order to master Javascript.
 
+## Table of Contents
+
+* [Data types in JS](#types)
+* [Call Stacks in JS](#stacks)
+* [Primitive vs Reference types in JS](#ref-types)
+* [== & === in JS](#equality)
+* [Coercion in JS](#coercion)
+* [Function and block scopes in JS](#scopes)
+* [Nested Objects in JS](#nested)
+* [function declaration vs function expression in JS](#function)
+* [this, call, apply, bind in JS](#this)
+* [JavaScript Engines](#engines)
+* [Object.create( ) & Object.assign( ) in JS](#object-assign)
+* [Object Deconstruction in JS](#deconstruction)
+
+
+
+
 <br/>
 <br/>
 
 
-## Data types in JavaScript 
+## <a name='types'>Data types in JavaScript</a>
 #### Primitive Data Types
 
 ##### Number 
@@ -115,7 +133,7 @@ This operator returns a string that tells the type of js variable.
 <br/>
 <br/>
 
-## Call Stacks in JavaScript 
+## <a name='stacks'>Call Stacks in JavaScript</a>
 
 A call stack is a mechanism for an interpreter (like the JS interpreter in a web browser) to keep **track** of its place in a script that calls *multiple functions* — what function is being currently run and what other functions are called within that function.
 
@@ -161,7 +179,7 @@ greetings();
 <br/>
 <br/>
 
-##  Primitive vs Reference types in JavaScript
+##  <a name='ref-types'>Primitive vs Reference types in JavaScript</a>
 #### Primitive types
 - strings, numbers, booleans, undefined, BigInt, symbol and null.
 - Stored by the value and hence also called Value Types
@@ -204,7 +222,7 @@ cosole.log(carOne) // This carOne.name ALSO changed.
 <br/>
 
 
-##  == & === in JavaScript
+##  <a name='equality'>== & === in JavaScript</a>
 #### == double equals
 - Double Equals (==) checks for value equality only.
 - Before checking the values, it converts the types of the variables to match each other.
@@ -246,7 +264,7 @@ Even though values are same, the type is not the same. Hence, **==** return `tru
 <br/>
 <br/>
 
-## Coercion in JS
+## <a name='coercion'>Coercion in JS</a>
 - Type coercion, type conversion, typecasting, and type juggling: all different names that refer to the process of converting one data type into another.
 
 
@@ -320,7 +338,7 @@ When type conversion is explicitly done in the code by the developer using inbui
 <br/>
 <br/>
 
-## Function and block scopes in JavaScript
+## <a name="scopes">Function and block scopes in JavaScript</a>
 There are 3 ways to declare variable in JS (ES6).
 ```js
 var height = 10
@@ -404,7 +422,8 @@ console.log(city); // 'Toronto'
 
 <br/>
 <br/>
-## Nested Objects
+
+## <a name='nested'>Nested Objects</a>
 - In application code, objects are often nested— an object might have another object as a property which in turn could have a property that’s an array of even more objects.
  
 
@@ -454,6 +473,7 @@ const employeeInfo = {
 ```
 
 <br/>
+
 ##### Bracket Notation
 
 The object name is followed by a set of square brackets, with the property name specified inside the brackets via either a string **(Example: employeeInfo['address']) or a variable (Example: employeeInfo['address'])**
@@ -491,7 +511,8 @@ The destructuring assignment syntax allows you to unpack array values or object 
 ```
 <br/>
 <br/>
-## function declaration vs function expression in JS
+
+## <a name='function'>function declaration vs function expression in JS</a>
 #### function declaration
 - Also known function statement, declares a function.
 - A declared function is “saved for later use”, and will be executed later, when it is invoked (called).
@@ -524,7 +545,7 @@ const sum = function (){
 - Function expressions can be used as an **argument** to another function, but function declarations cannot.
 - Function expressions can be **anonymous**, while function declarations cannot.
 
-## this, call, apply, bind in JS
+## <a name='this'>this, call, apply, bind in JS</a>
 #### this ( )
 - In JavaScript, **this** always refers to an object.
 
@@ -632,7 +653,7 @@ person.fullName.apply(person1, ["Oslo", "Norway"]);
 <br/>
 <br/>
 
-## JavaScript Engines
+## <a name='engines'>JavaScript Engines</a>
 
 - A JavaScript engine is a program that interprets JavaScript code and translates it into a format that a computer can understand.
  
@@ -700,7 +721,7 @@ person.fullName.apply(person1, ["Oslo", "Norway"]);
 <br/>
 <br/>
 
-## Object.create( ) & Object.assign( )
+## <a name='object-assign'>Object.create( ) & Object.assign( ) in JS </a>
 
 #### Object.create( )
 It is a method used to create an object from an existing object. It creates a new object and sets the newly created object’s prototype to the original object.
@@ -782,7 +803,7 @@ console.log(object2);
 <br/>
 
 
-## Object Deconstruction
+## <a name="deconstruction">Object Deconstruction</a>
 - Destructuring is a JavaScript expression that allows us to extract data from arrays, objects, and maps and set them into new, distinct variables.
 
 #### Syntax
