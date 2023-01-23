@@ -5,7 +5,9 @@
 # 40 JavaScript Essential Concepts (Updating the repo everyday)
 
 
-For anyone starting with Web Development, It is important to know the basics of JavaScript, but it can be confusing to figure out just where to start. That’s where this repository comes in. This repo will explain 40 of the most essential concepts that every developer should know to become a successful Javascript programmer. From data types and variables to functions and classes, this repository will cover the key concepts that one needs to know in order to master Javascript.
+For anyone starting with Web Development, It is important to know the basics of JavaScript, but it can be confusing to figure out just where to start. That’s where this repository comes in. This repo will explain 40 of the most essential concepts that every developer should know to become a successful Javascript programmer. From data types and variables to functions and classes, this repository will cover the key concepts that one needs to know in order to master Javascript. 
+
+Every concept covered in this repo has an Instagram Reel, please click on 🎬 in every heading.
 
 ## Table of Contents
 
@@ -29,7 +31,7 @@ For anyone starting with Web Development, It is important to know the basics of 
 <br/>
 
 
-## <a name='types'>Data types in JavaScript</a>
+## <a name='types'>Data types in JavaScript</a> <a href='https://www.instagram.com/reel/Cmf0v2FoCGU/?igshid=MDM4ZDc5MmU='>🎬</a>
 #### Primitive Data Types
 
 ##### Number 
@@ -133,7 +135,7 @@ This operator returns a string that tells the type of js variable.
 <br/>
 <br/>
 
-## <a name='stacks'>Call Stacks in JavaScript</a>
+## <a name='stacks'>Call Stacks in JavaScript</a> <a href='https://www.instagram.com/reel/CmiKqgZI1br/?igshid=MDM4ZDc5MmU='>🎬</a>
 
 A call stack is a mechanism for an interpreter (like the JS interpreter in a web browser) to keep **track** of its place in a script that calls *multiple functions* — what function is being currently run and what other functions are called within that function.
 
@@ -179,7 +181,7 @@ greetings();
 <br/>
 <br/>
 
-##  <a name='ref-types'>Primitive vs Reference types in JavaScript</a>
+##  <a name='ref-types'>Primitive vs Reference types in JavaScript</a>  <a href='https://www.instagram.com/reel/CmlKFQ7q_Vd/?igshid=MDM4ZDc5MmU='>🎬</a>
 #### Primitive types
 - strings, numbers, booleans, undefined, BigInt, symbol and null.
 - Stored by the value and hence also called Value Types
@@ -222,7 +224,7 @@ cosole.log(carOne) // This carOne.name ALSO changed.
 <br/>
 
 
-##  <a name='equality'>== & === in JavaScript</a>
+##  <a name='equality'>== & === in JavaScript</a> <a href='https://www.instagram.com/reel/CmnZoMvIrps/?igshid=MDM4ZDc5MmU='>🎬</a>
 #### == double equals
 - Double Equals (==) checks for value equality only.
 - Before checking the values, it converts the types of the variables to match each other.
@@ -264,7 +266,7 @@ Even though values are same, the type is not the same. Hence, **==** return `tru
 <br/>
 <br/>
 
-## <a name='coercion'>Coercion in JS</a>
+## <a name='coercion'>Coercion in JS</a> <a href='https://www.instagram.com/reel/CmsrGwyoBoR/?igshid=MDM4ZDc5MmU='>🎬</a>
 - Type coercion, type conversion, typecasting, and type juggling: all different names that refer to the process of converting one data type into another.
 
 
@@ -338,7 +340,8 @@ When type conversion is explicitly done in the code by the developer using inbui
 <br/>
 <br/>
 
-## <a name="scopes">Function and block scopes in JavaScript</a>
+## <a name="scopes">Function and block scopes in JavaScript</a>  
+<a href='https://www.instagram.com/reel/CmvXZ9jIg6K/?igshid=MDM4ZDc5MmU='>🎬</a>
 There are 3 ways to declare variable in JS (ES6).
 ```js
 var height = 10
@@ -423,7 +426,7 @@ console.log(city); // 'Toronto'
 <br/>
 <br/>
 
-## <a name='nested'>Nested Objects</a>
+## <a name='nested'>Nested Objects</a> <a href='https://www.instagram.com/reel/CmxqJpjo_L5/?igshid=MDM4ZDc5MmU='>🎬</a>
 - In application code, objects are often nested— an object might have another object as a property which in turn could have a property that’s an array of even more objects.
  
 
@@ -512,7 +515,7 @@ The destructuring assignment syntax allows you to unpack array values or object 
 <br/>
 <br/>
 
-## <a name='function'>function declaration vs function expression in JS</a>
+## <a name='function'>function declaration vs function expression in JS</a> <a href='https://www.instagram.com/reel/Cm-t3hSoKNt/?igshid=MDM4ZDc5MmU='>🎬</a>
 #### function declaration
 - Also known function statement, declares a function.
 - A declared function is “saved for later use”, and will be executed later, when it is invoked (called).
@@ -545,7 +548,7 @@ const sum = function (){
 - Function expressions can be used as an **argument** to another function, but function declarations cannot.
 - Function expressions can be **anonymous**, while function declarations cannot.
 
-## <a name='this'>this, call, apply, bind in JS</a>
+## <a name='this'>this, call, apply, bind in JS</a> <a href='https://www.instagram.com/reel/CnGuCQmqpxX/?igshid=MDM4ZDc5MmU='>🎬</a>
 #### this ( )
 - In JavaScript, **this** always refers to an object.
 
@@ -653,7 +656,7 @@ person.fullName.apply(person1, ["Oslo", "Norway"]);
 <br/>
 <br/>
 
-## <a name='engines'>JavaScript Engines</a>
+## <a name='engines'>JavaScript Engines</a> <a href='https://www.instagram.com/reel/CnYKcQVqedI/?igshid=MDM4ZDc5MmU='>🎬</a>
 
 - A JavaScript engine is a program that interprets JavaScript code and translates it into a format that a computer can understand.
  
@@ -721,7 +724,7 @@ person.fullName.apply(person1, ["Oslo", "Norway"]);
 <br/>
 <br/>
 
-## <a name='object-assign'>Object.create( ) & Object.assign( ) in JS </a>
+## <a name='object-assign'>Object.create( ) & Object.assign( ) in JS </a> <a href='https://www.instagram.com/reel/Cndqon-o9LK/?igshid=MDM4ZDc5MmU='>🎬</a>
 
 #### Object.create( )
 It is a method used to create an object from an existing object. It creates a new object and sets the newly created object’s prototype to the original object.
@@ -803,7 +806,7 @@ console.log(object2);
 <br/>
 
 
-## <a name="deconstruction">Object Deconstruction</a>
+## <a name="deconstruction">Object Deconstruction</a> <a href='https://www.instagram.com/reel/Cnn0oK0qqgp/?igshid=MDM4ZDc5MmU='>🎬</a>
 - Destructuring is a JavaScript expression that allows us to extract data from arrays, objects, and maps and set them into new, distinct variables.
 
 #### Syntax
