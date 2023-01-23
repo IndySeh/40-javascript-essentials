@@ -340,7 +340,8 @@ When type conversion is explicitly done in the code by the developer using inbui
 <br/>
 <br/>
 
-## <a name="scopes">Function and block scopes in JavaScript</a>  <a href='https://www.instagram.com/reel/CmvXZ9jIg6K/?igshid=MDM4ZDc5MmU='>🎬</a>
+## <a name="scopes">Function and block scopes in JavaScript</a> <a href='https://www.instagram.com/reel/CmvXZ9jIg6K/?igshid=MDM4ZDc5MmU='>🎬</a>
+
 There are 3 ways to declare variable in JS (ES6).
 ```js
 var height = 10
