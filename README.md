@@ -23,6 +23,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [JavaScript Engines](#engines)
 * [Object.create( ) & Object.assign( ) in JS](#object-assign)
 * [Object Deconstruction in JS](#deconstruction)
+* [Default vs Named exports](#exports)
 
 
 
@@ -863,3 +864,61 @@ const { firstname = 'Bruce',
 console.log( firstname, lastname, city);
 // Bruce Wayne Toronto
 ```
+## <a name="exports">Default vs Named exports</a> <a href='https://www.instagram.com/reel/Cn6D3F9qZNn/?igshid=MDM4ZDc5MmU='>🎬</a>
+####  Default vs Named exports in JS
+-  The **export** declaration is used to export values from a JavaScript module.
+
+
+ - Exported values can then be imported into other programs with the import declaration or dynamic import. this is done by adding **type="module"**
+
+
+ -  A file can have not more than one default export, but it can have as many named exports as you like.
+
+
+
+- There are two primary ways to export values in JS
+  - Default Export 
+  - Named Export
+
+#### Default Export
+
+- Only one default export is allowed per file. When importing, a specific name must be provided and the import must be written in the following format:
+
+```js
+
+// my-module.js
+function sayHello() {
+  console.log('Hello!');
+}
+
+export default sayHello;
+
+// main.js
+import sayHello from './my-module.js';
+
+sayHello(); // 'Hello!'
+
+```
+
+
+
+
+#### Named Export
+- Named exports allow for multiple exports from a single file.Specific exports can be imported by enclosing their names in curly braces. 
+
+
+- It is important to note that the name of the imported module has to match the name of the module being exported.
+
+```js
+import { myExport } from "/modules/my-module.js";
+
+// You can import multiple names from the same module.
+import { foo, bar } from "/modules/my-module.js";
+
+// You can rename an export when importing it. 
+import { longModuleExportName as shortName } 
+from "/modules/my-module.js";
+
+```
+
+
