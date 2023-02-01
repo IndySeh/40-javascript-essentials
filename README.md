@@ -24,6 +24,8 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Object.create( ) & Object.assign( ) in JS](#object-assign)
 * [Object Deconstruction in JS](#deconstruction)
 * [Default vs Named exports](#exports)
+* [.map( ), reduce( ), filter( )](#maps)
+
 
 
 
@@ -919,6 +921,83 @@ import { foo, bar } from "/modules/my-module.js";
 import { longModuleExportName as shortName } 
 from "/modules/my-module.js";
 
+```
+## <a name="maps">.map( ), .reduce( ), .filter( )</a> <a href='https://www.instagram.com/reel/CoG15Q9oVan/?igshid=MDM4ZDc5MmU='>🎬</a>
+#### 
+
+
+#### .map ( )
+- The map( ) method creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+<br/>
+
+- Map can be used when you want to perform an action on each element in a collection, and gather the results into a new array. 
+
+##### Examples
+```js
+//  Use .map() to find the square of all elements in an array:
+const numbers = [1, 2, 3, 4, 5];
+const squares = numbers.map(num => num * num);
+
+// Create a new array of objects using .map() and an array of data:
+const data = [
+  {name: 'Alex', job: 'Engineer'},
+  {name: 'Bob', job: 'Doctor'}
+];
+const people = data.map((person, index) => {
+  const newPerson = {
+    id: index + 1,
+    name: person.name,
+    job: person.job
+  };
+  return newPerson;
+});
+```
+
+#### .reduce( )
+- reduce takes( ) an array and reduces it into a single value. For instance, with an array of numbers you can easily find the average of all values or calculate sum of array.
+
+
+##### Examples
+
+```js
+
+//Example 1 - Sum All Items in an Array
+const numbers = [2, 3, 5, 10];
+const sum = numbers.reduce((total, amount)=> total + amount);
+
+console.log(sum);  // Output: 20
+
+// Example 2 - Flatten an Array of Arrays
+const flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+  (accumulator, array) => accumulator.concat(array),
+  []
+);
+
+console.log(flattened);  // Output: [ 0, 1, 2, 3, 4, 5 ]
+```
+#### .filter ( )
+- The filter( ) method creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+
+
+##### Examples
+```js
+// Filtering an array of numbers:
+let numbers = [2, 4, 6, 8, 10];
+let evenNumbers = numbers.filter(number => number % 2 === 0);
+// evenNumbers will be [2, 4, 6, 8, 10]
+
+// Filtering an array of objects:
+let users = [
+  {name: 'John', age: 30},
+  {name: 'Jane', age: 25},
+  {name: 'Bob', age: 32},
+  {name: 'Sara', age: 20}
+];
+
+let adults = users.filter(user => user.age >= 18);
+/* adults will be [{name: 'John', age: 30},
+{name: 'Jane', age: 25},{name: 'Bob', age: 32}]*/
 ```
 
 
