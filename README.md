@@ -25,6 +25,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Object Deconstruction in JS](#deconstruction)
 * [Default vs Named exports](#exports)
 * [.map( ), reduce( ), filter( )](#maps)
+* [the new operator](#new)
 
 
 
@@ -1000,4 +1001,49 @@ let adults = users.filter(user => user.age >= 18);
 {name: 'Jane', age: 25},{name: 'Bob', age: 32}]*/
 ```
 
+## <a name="new">The new operator</a> <a href='https://www.instagram.com/reel/CoTclNGoaBi/?igshid=MDM4ZDc5MmU='>🎬</a>
+The new operator does 4 things:
+- It creates a new, empty object.
+- It adds a property onto our newly created object called “__proto__” which points to the constructor function’s prototype object.
+- It binds this to our newly created object.
+- It adds a return this to the end of the function, so that the object that is created is returned from the function.
+
+
+#### Example
+```js
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+//Invoke the Person constructor using new
+var candidate = new Person('Logan', 28)
+```
+###### Behind the scenes after we run the above
+- A new object is created — the candidate object.
+- this is bound to our candidate object. So any references to this will point to candidate.
+- Our __proto__ is added. candidate.__proto__ will now point to Person.prototype.
+- After everything is done, our brand new candidate object is returned to our new candidate variable.
+
+
+
+#### What is \__proto__
+- It is an actual object that provides a way to inherit properties from JavaScript with the help of an object which is created with new. Every object with behavior associated has internal property [[prototype]].
+
+Lets head to chrome dev tools and follow the steps below 
+```js
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+var candidate = new Person('Logan', 28)
+
+// open console type
+candidate
+```
+ 
+In ScreenShot below, Object have proto property
+
+<img width="253" src="https://user-images.githubusercontent.com/115108831/216867503-84dd7ccd-7a78-4435-abeb-58f9f682d9fe.png">
 
