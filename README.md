@@ -26,6 +26,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Default vs Named exports](#exports)
 * [.map( ), reduce( ), filter( )](#maps)
 * [the new operator](#new)
+* [typeof, instanceof operator](#typeof)
 
 
 
@@ -1046,4 +1047,59 @@ candidate
 In ScreenShot below, Object have proto property
 
 <img width="253" src="https://user-images.githubusercontent.com/115108831/216867503-84dd7ccd-7a78-4435-abeb-58f9f682d9fe.png">
+
+## <a name="typeof">typeof, instanceof Operators </a> <a href='https://www.instagram.com/reel/CogO3JjqjDq/?igshid=MDM4ZDc5MmU='>🎬</a>
+
+#### typeof
+
+The typeof operator returns a string indicating the type of the operand's value. Mainly primitive values such as numbers, strings, symbols, booleans, bigint and undefined values.
+```js
+console.log(typeof 42);// Output: "number"
+
+console.log(typeof 'blubber');// Output: "string"
+
+console.log(typeof true);// Output: "boolean"
+
+console.log(typeof undeclaredVariable);// "undefined"
+```
+Please note that it can’t be used to check for the **null type**. 
+```js
+console.log(typeof null);// Output: Object
+```
+
+
+###### Why typeof(null) returns `Object`?
+In the first implementation of JavaScript, JavaScript values were represented as a type tag and a value. The type tag for objects was 0. null was represented as the NULL pointer (0x00 in most platforms). Consequently, null had 0 as type tag, hence the **typeof** return value "object". 
+
+
+#### instanceof
+- instanceof checks the current object and returns true if the object is of the specified object type.
+```js
+// Syntax
+object instanceof constructor
+```
+**Examples**
+```js
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const auto = new Car('Tesla', 'Model 3', 2023);
+
+console.log(auto instanceof Car);
+// Expected output: true
+
+console.log(auto instanceof Object);
+// Expected output: true
+```
+
+
+- Anything Created with **new** can also Be Checked with the instanceof Operator
+```js
+let foo = new String('foo');
+console.log(typeof foo);
+console.log(foo instanceof String);
+```
+
 
