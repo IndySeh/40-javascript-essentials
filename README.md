@@ -27,6 +27,8 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [.map( ), reduce( ), filter( )](#maps)
 * [the new operator](#new)
 * [typeof, instanceof operator](#typeof)
+* [Pure functions](#pure)
+
 
 
 
@@ -1101,5 +1103,35 @@ let foo = new String('foo');
 console.log(typeof foo);
 console.log(foo instanceof String);
 ```
+
+## <a name="pure">Pure functions </a> <a href='https://www.instagram.com/reel/Covh14kIhVb/?igshid=MDM4ZDc5MmU='>🎬</a>
+- A Pure Function is a function that always returns the **same result** if the same arguments are **passed**.
+- It does not depend on any **state** or data change during a program’s execution.
+- It only depends on its input arguments.
+- A pure function does not produce any observable side effects such as network requests or data mutation, etc.
+
+#### Example 
+```js
+function calculateFederalTax( itemPrice ) {
+    return itemPrice * 0.03;
+    }
+
+console.log(calculateFederalTax(34))
+```
+- The above function is an example of **pure function**, It will always return the same value if we pass the same argument and Its output does not depend on anything else.
+
+
+#### Please note the below function is not a pure function
+```js
+var specialTax = 0.10
+function calculateFederalTax( itemPrice ){
+    return (itemPrice * 0.03) + specialTax;
+    }
+
+console.log(calculateFederalTax(34))
+```
+
+- It is not a pure function as the output is dependent on an external variable “specialTax”.
+- If specialTax updated, the output is going to be different even if the itemPrice is same. 
 
 
