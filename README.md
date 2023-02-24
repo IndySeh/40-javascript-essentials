@@ -28,6 +28,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [the new operator](#new)
 * [typeof, instanceof operator](#typeof)
 * [Pure functions](#pure)
+* [Higher-Order functions](#higher)
 
 
 
@@ -1134,4 +1135,30 @@ console.log(calculateFederalTax(34))
 - It is not a pure function as the output is dependent on an external variable “specialTax”.
 - If specialTax updated, the output is going to be different even if the itemPrice is same. 
 
+## <a name="higher">Higher-Order functions </a> <a href='https://www.instagram.com/reel/CpDIAk6IyXB/?igshid=MDM4ZDc5MmU='>🎬</a>
+- Higher order functions are functions that take other functions as arguments and/or return functions as output.
+- These functions can be used to apply sequence of operations as well as for composition of expressions for evaluation.
+- This ability to handle higher-order functions, among other characteristics, makes JavaScript one of the programming languages well-suited for functional programming.
 
+#### Examples 
+##### map( )
+- The map( ) method is a higher-order function in JavaScript that can be used to apply a function to every element in an array:
+
+```js
+const numbers = [2, 4, 6, 8];
+
+const evenNumbers = numbers.map(number => 
+                                number * 2);
+console.log(evenNumbers);//Output: [4, 8, 12, 16]
+```
+
+#### filter(  )
+- The filter( ) method is another higher-order function in JavaScript that can be used to filter an array based on a condition.
+```js
+const numbers = [2, 4, 6, 8, 10];
+
+const evenNumbers = numbers.filter(number
+                           => number % 2 == 0);
+
+console.log(evenNumbers);//Output: [2, 4, 6, 8, 10]
+```
