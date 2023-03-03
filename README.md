@@ -29,6 +29,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [typeof, instanceof operator](#typeof)
 * [Pure functions](#pure)
 * [Higher-Order functions](#higher)
+* [Side-Effects](#effects)
 
 
 
@@ -1162,3 +1163,34 @@ const evenNumbers = numbers.filter(number
 
 console.log(evenNumbers);//Output: [2, 4, 6, 8, 10]
 ```
+
+
+## <a name='effects'>Side Effects in JavaScript</a> <a href='https://www.instagram.com/reel/CpT3BU2DZLi/?igshid=MDM4ZDc5MmU='>🎬</a>
+- A side effect occurs in a program whenever you use an external code in your function—which, as a result, impacts the function's ability to perform its task.
+
+#### Code in the snippet below has 3 side-effects.
+
+```js
+let x = 5;
+
+function sum(y) {
+  return x += y;
+}
+
+```
+##### Side-effect 1 - Dependency on x
+- sum( ) depends on the value of x to return `x += y`, if the the x is not available, we would get an **Uncaught ReferenceError**.
+
+```js
+let x = 5;
+
+function sum(y) {
+  return x += y;
+}
+```
+
+##### Side-effect 2 - Modifies External Code
+- sum( ) is changing the value of exteranl variable by adding `y`, hence, sum( ) has a side effect of manipulating external code.
+
+##### Side-effect 3 - makes sum() non-deterministic function
+- A non-deterministic function—as you can never determine its output by solely reading it.
