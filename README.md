@@ -30,6 +30,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Pure functions](#pure)
 * [Higher-Order functions](#higher)
 * [Side-Effects](#effects)
+* [Spread Operator](#spread)
 
 
 
@@ -1194,3 +1195,58 @@ function sum(y) {
 
 ##### Side-effect 3 - makes sum() non-deterministic function
 - A non-deterministic function—as you can never determine its output by solely reading it.
+
+
+
+## <a name='spread'>Spread operator (...) in JS</a> <a href='https://www.instagram.com/reel/CpoSp34o_kg/?igshid=YmMyMTA2M2Y='>🎬</a>
+
+- The spread operator is a feature in the Javascript language that enables you to expand (or "spread") an array into a list of individual values. 
+
+- It is represented by three consecutive periods (...).
+
+#### What `...` can do
+- Copying an array
+- Concatenating or combining arrays
+- Using Math functions
+- Using an array as arguments
+
+#### Examples
+**Copying an Array**
+
+Using the spread operator, you can quickly make copies of an array without having to manually loop or push elements.
+```js
+const arr = [1, 2, 3];
+const arrCopy = [...arr];
+console.log(arrCopy) // [1,2,3]
+```
+
+**Array Concatenation**
+
+The spread operator also enables you to quickly merge multiple arrays into one.
+```js
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr3 = [...arr1, ...arr2];
+console.log([1, 2, 3, 4, 5, 6])
+```
+
+**Spread in function calls**
+```js
+function myFunction(x, y, z) {}
+const args = [0, 1, 2];
+myFunction(...args);
+```
+
+**Using Math functions**
+
+One of the best ways to understand the use of spread operator in JavaScript is to look at the the built-in functions Math.min( ) and Math.max( ), which both expect a list of arguments, not an array.
+
+```js
+const numbers = [37, -17, 7, 0]
+console.log(Math.min(numbers)) // NaN
+console.log(Math.min(...numbers)) // -17
+console.log(Math.max(...numbers)) // 37
+```
+
+
+
