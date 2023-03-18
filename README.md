@@ -31,7 +31,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Higher-Order functions](#higher)
 * [Side-Effects](#effects)
 * [Spread Operator](#spread)
-* [JavaScript Objects](#objects)
+* [JavaScript Objects](#jsobjects)
 
 
 
@@ -1249,14 +1249,14 @@ console.log(Math.min(...numbers)) // -17
 console.log(Math.max(...numbers)) // 37
 ```
 
-## <a name='objects'>JavaScript Objects</a> <a href='https://www.instagram.com/reel/Cp6azlkD97H/?igshid=YmMyMTA2M2Y='>🎬</a>
+## <a name='jsobjects'>JavaScript Objects</a> <a href='https://www.instagram.com/reel/Cp6azlkD97H/?igshid=YmMyMTA2M2Y='>🎬</a>
 
 #### Example 1
 Imagine you have a toy car with some properties like **color and speed**. In JavaScript, you can create an object called "**Car**" that has those same properties. 
 
 Here's some code for the Car object:
 
-```js: Car Object
+```js
 let car = {
   color: "red",
   speed: 10,
@@ -1279,7 +1279,7 @@ car.move(); // logs "The car is moving!"
 Now imagine you have a toy dog with some properties like **breed and age**. In JavaScript, you can create an object called **"Dog"** that has those same properties. 
 
 Here's some code for the Dog object:
-```js:dog Object
+```js
 let dog = {
   breed: "golden retriever",
   age: 5,
@@ -1297,7 +1297,7 @@ dog.bark(); // logs "Woof!"
 Imagine you have a toy phone with some properties like **brand and model**. In JavaScript, you can create an object called **"Phone"** that has those same properties.
 
 Here's some code for the Phone object:
-```js:Phone object
+```js
 let phone = {
   brand: "Apple",
   model: "iPhone 12",
