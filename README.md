@@ -31,6 +31,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Higher-Order functions](#higher)
 * [Side-Effects](#effects)
 * [Spread Operator](#spread)
+* [JavaScript Objects](#objects)
 
 
 
@@ -1248,5 +1249,67 @@ console.log(Math.min(...numbers)) // -17
 console.log(Math.max(...numbers)) // 37
 ```
 
+## <a name='objects'>JavaScript Objects</a> <a href='https://www.instagram.com/reel/Cp6azlkD97H/?igshid=YmMyMTA2M2Y='>🎬</a>
+
+#### Example 1
+Imagine you have a toy car with some properties like **color and speed**. In JavaScript, you can create an object called "**Car**" that has those same properties. 
+
+Here's some code for the Car object:
+
+```js: Car Object
+let car = {
+  color: "red",
+  speed: 10,
+  move() {
+    console.log("The car is moving!");
+  }
+};
+```
+
+In this object, we use the curly braces {} to create a container for the car's properties. We set the **color and speed** properties to "red" and 10, respectively. We also create a method called move( ) that logs a message to the console.
+
+```js
+console.log(car.color); // logs "red"
+car.move(); // logs "The car is moving!"
+
+```
+
+
+#### Example 2
+Now imagine you have a toy dog with some properties like **breed and age**. In JavaScript, you can create an object called **"Dog"** that has those same properties. 
+
+Here's some code for the Dog object:
+```js:dog Object
+let dog = {
+  breed: "golden retriever",
+  age: 5,
+  bark() {
+    console.log("Woof!");
+  }
+};
+```
+In this object, we set the **breed and age** properties to "golden retriever" and 5, respectively. We also create a method called bark( ) that logs a message to the console.
+```js
+console.log(dog.breed); // logs "golden retriever"
+dog.bark(); // logs "Woof!"
+```
+#### Example 3
+Imagine you have a toy phone with some properties like **brand and model**. In JavaScript, you can create an object called **"Phone"** that has those same properties.
+
+Here's some code for the Phone object:
+```js:Phone object
+let phone = {
+  brand: "Apple",
+  model: "iPhone 12",
+  ring() {
+    console.log("Ring ring!");
+  }
+};
+```
+In this object, we set the **brand and model** properties to "Apple" and "iPhone 12", respectively. We also create a method called ring() that logs a message to the console.
+```js
+console.log(phone.model); // logs "iPhone 12"
+phone.ring(); // logs "Ring ring!"
+```
 
 
