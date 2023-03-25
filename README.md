@@ -33,6 +33,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Spread Operator](#spread)
 * [JavaScript Objects](#jsobjects)
 * [Closures in JavaScript](#closures)
+* [Memoizing in JavaScript](#memoization)
 
 
 
@@ -1342,4 +1343,51 @@ counter(); // output: 2
 - Creating private variables and functions in JavaScript classes
 - Memoizing expensive calculations to improve performance
 - Handling asynchronous operations with callbacks
+
+
+
+## <a name='memoization'>Memoizing in JavaScript</a> <a href=''>🎬</a>
+
+- Memoizing is a fancy way of saying "remembering things" to save time later. 
+
+- Just like how you remember your mom's phone number or your friend's favorite color so you don't have to look it up every time.
+
+- Let's say you have a fun game where you need to roll a dice and add up the numbers. But sometimes, you might need to add up the numbers multiple times. Instead of rolling the dice every time, you can memoize the result so that you don't have to roll it again.
+
+### Example
+```js
+function add(x, y) {
+  console.log('Calculating...');
+  return x + y;
+}
+
+function memoize(fn) {
+  const cache = {};
+  return function(...args) {
+    const key = JSON.stringify(args);
+    if (cache[key]) {
+      return cache[key];
+    }
+    const result = fn(...args);
+    cache[key] = result;
+    return result;
+  }
+}
+
+const memoizedAdd = memoize(add);
+console.log(memoizedAdd(2, 3)); 
+// logs "Calculating..." and returns 5
+console.log(memoizedAdd(2, 3)); 
+// returns 5 without logging "Calculating..."
+```
+
+
+- In the example, we have an **add** function that simply adds two numbers together and logs "Calculating..." to the console. 
+
+- We also have a **memoize** function that takes any function as an argument and returns a memoized version of that function.
+
+- We can use memoize to memoize the add function and avoid logging "Calculating..." more than once for the same arguments. The first time we call **memoizedAdd(2, 3)**, it logs "Calculating..." and returns 5. The second time we call memoizedAdd(2, 3), it returns 5 without logging "Calculating..." because the result is already cached in the cache object.
+
+
+
 
