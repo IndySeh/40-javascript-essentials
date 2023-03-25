@@ -32,6 +32,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Side-Effects](#effects)
 * [Spread Operator](#spread)
 * [JavaScript Objects](#jsobjects)
+* [Closures in JavaScript](#closures)
 
 
 
@@ -1311,5 +1312,34 @@ In this object, we set the **brand and model** properties to "Apple" and "iPhone
 console.log(phone.model); // logs "iPhone 12"
 phone.ring(); // logs "Ring ring!"
 ```
+## <a name='closures'>Closures in JavaScript</a> <a href='https://www.instagram.com/reel/CqMuq6norDR/?igshid=YmMyMTA2M2Y='>🎬</a>
+- Imagine you have a toy box with different toys inside. When you want to play with a toy, you open the box and pick the toy you want to play with. When you're done playing, you put the toy back in the box and close the lid.
 
+- Now, let's say the toy box is like a function in JavaScript. When you call the function, it "opens" and you can access everything inside, like variables or other functions. When the function is done running, it "closes" and everything inside goes away. But what if you want to keep something from the function even after it's done running? That's where closures come in.
+
+- A closure is like taking a toy out of the toy box and keeping it with you even after you close the lid. In JavaScript, a closure is when a function keeps access to variables from its outer scope, even after the function has returned.
+
+### Example of Closure
+```js
+function createCounter() {
+  let count = 0;
+
+  return function() {
+    count++;
+    console.log(count);
+  };
+}
+let counter = createCounter();
+counter(); // output: 1
+counter(); // output: 2
+```
+- In this example, createCounter returns a function that keeps track of a count variable even after createCounter has finished running. When we call createCounter, it creates a new variable called count and returns a new function. We save that function in a variable called counter.
+
+- When we call counter( ), it increments the count variable and logs the new value to the console. Because counter is a closure, it has access to the count variable even though createCounter has finished running.
+
+
+### Closures in real-world scenarios
+- Creating private variables and functions in JavaScript classes
+- Memoizing expensive calculations to improve performance
+- Handling asynchronous operations with callbacks
 
