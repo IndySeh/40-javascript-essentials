@@ -34,6 +34,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [JavaScript Objects](#jsobjects)
 * [Closures in JavaScript](#closures)
 * [Memoizing in JavaScript](#memoization)
+* [Objects vs Classes in JavaScript](#classesvsobjects)
 
 
 
@@ -1388,6 +1389,50 @@ console.log(memoizedAdd(2, 3));
 
 - We can use memoize to memoize the add function and avoid logging "Calculating..." more than once for the same arguments. The first time we call **memoizedAdd(2, 3)**, it logs "Calculating..." and returns 5. The second time we call memoizedAdd(2, 3), it returns 5 without logging "Calculating..." because the result is already cached in the cache object.
 
+
+
+## <a name='classesvsobjects'>Objects vs Classes in JS</a> <a href='https://www.instagram.com/reel/Cqo2VR_Ibxr/?igshid=YmMyMTA2M2Y='>🎬</a>
+#### JavaScript Objects
+- Imagine you have a toy car and a toy truck. They are both toys, but they look different and have different features.
+- In the same way, objects and classes in JavaScript are both things that can store information, but they are **different** from each other.
+- An **object** is like a container that can hold different pieces of information, like a person's name, age, and favorite color. So, you can create an object called "person" and give it these properties:
+
+```js
+const person = {
+  name: "Sarah",
+  age: 5,
+  favoriteColor: "purple"
+};
+```
+#### JavaScript Class
+
+- A **class**, on the other hand, is like a blueprint for creating objects. It's like a set of instructions that tells you how to create objects with certain properties and methods. 
+- For example, you can create a class called "Animal" that has properties like "species" and "age" and methods like "eat" and "sleep".
+```js
+class Animal {
+  constructor(species, age) {
+    this.species = species;
+    this.age = age;
+  }
+  
+  eat() {
+    console.log("I'm eating!");
+  }
+  
+  sleep() {
+    console.log("I'm sleeping!");
+  }
+}
+```
+
+Once you have a class, you can create objects that follow its blueprint by using the "new" keyword. For example:
+
+```js
+const cat = new Animal("cat", 3);
+cat.eat(); // Output: "I'm eating!"
+cat.sleep(); // Output: "I'm sleeping!"
+
+```
 
 
 
