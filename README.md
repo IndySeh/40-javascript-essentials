@@ -35,6 +35,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Closures in JavaScript](#closures)
 * [Memoizing in JavaScript](#memoization)
 * [Objects vs Classes in JavaScript](#classesvsobjects)
+* [Rest Parameters in JavaScript](#rest)
 
 
 
@@ -1434,5 +1435,27 @@ cat.sleep(); // Output: "I'm sleeping!"
 
 ```
 
+
+## <a name='rest'>Rest Parameters in JavaScript</a> <a href='https://www.instagram.com/reel/Cq7Gn--IBb5/?igshid=YmMyMTA2M2Y='>🎬</a>
+- Rest parameters in JavaScript are a feature that allows a function to accept an indefinite number of arguments as an array. 
+- This means that a function can take any number of arguments, and these arguments can be accessed as an array inside the function. 
+- The rest parameter is denoted by three dots `...` followed by the name of the parameter.
+
+#### Example of Rest Parameter
+A function that calculates the average of a set of numbers:
+
+```js
+function average(...numbers) {
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total / numbers.length;
+}
+
+average(1, 2, 3); // returns 2
+average(1, 2, 3, 4, 5); // returns 3
+
+```
 
 
