@@ -36,6 +36,9 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Memoizing in JavaScript](#memoization)
 * [Objects vs Classes in JavaScript](#classesvsobjects)
 * [Rest Parameters in JavaScript](#rest)
+* [Rest Parameters in JavaScript](#rest)
+* [JavaScript Classes](#classes)
+
 
 
 
@@ -1457,5 +1460,62 @@ average(1, 2, 3); // returns 2
 average(1, 2, 3, 4, 5); // returns 3
 
 ```
+
+## <a name='classes'>JavaScript Classes</a> <a href='https://www.instagram.com/reel/Cre9TqsobOw/?igshid=YmMyMTA2M2Y='>🎬</a>
+Imagine you have a social media app, and you want to create many user accounts for different people. A "Person" class can serve as a blueprint to create multiple user objects with similar properties and actions.
+```js
+class Person {
+  constructor(firstName, lastName, age, gender) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.gender = gender;
+  }
+
+  greet() {
+    console.log(`Hi, my name is ${this.firstName} ${this.lastName}!`);
+  }
+
+  postStatus(status) {
+    console.log(`${this.firstName} posted: "${status}"`);
+  }
+
+  addFriend(friend) {
+    console.log(`${this.firstName} added ${friend} as a friend!`);
+  }
+}
+
+// Creating person objects from the Person class
+const person1 = new Person("John", "Doe", 18, "Male");
+const person2 = new Person("Jane", "Smith", 17, "Female");
+
+```
+In this example, we've created two person objects, **`person1`** and **`person2`**, using the "Person" class. We passed in different values for **`firstName`**, **`lastName`**, **`age`**, and **`gender`** for each object.
+
+Now, we can use these objects to access the properties and methods defined in the "Person" class:
+
+```js
+// Accessing properties and methods of person objects
+console.log(person1.age); // Output: 18
+console.log(person2.gender); // Output: "Female"
+person1.greet(); // Output: "Hi, my name is John Doe!"
+person2.postStatus("Feeling happy today!"); // Output: "Jane posted: 'Feeling happy today!'"
+person1.addFriend(person2); // Output: "John added Jane as a friend!"
+```
+
+As you can see, we can use the "Person" class as a blueprint to create multiple person objects with similar properties and behaviors. Just like how you can create many user accounts in a social media app from the same blueprint, you can create many objects from the same class in JavaScript!
+
+#### Scenarios for Classes
+
+JavaScript classes are used in various scenarios where object-oriented programming (OOP) concepts are employed to structure code, create reusable components, and manage complex application logic. Some common scenarios where JavaScript classes are used include:
+
+1. Creating UI components: JavaScript classes can be used to create UI components such as buttons, modals, forms, and sliders, where each component can have its own properties (e.g., size, color) and methods (e.g., event handling, animation).
+2. Implementing data models: JavaScript classes can be used to define data models, such as representing a user, product, or order in an e-commerce application. Classes can define the properties and methods related to these data models, making it easier to create, manipulate, and manage data objects.
+3. Managing application state: JavaScript classes can be used to represent the state and behavior of different parts of an application, such as managing the state of a game, a shopping cart, or a user session. Classes can help organize and encapsulate the logic related to managing the application state, making the code more modular and maintainable.
+4. Implementing utility functions: JavaScript classes can be used to create utility functions, such as for handling date and time, managing network requests, or performing mathematical operations. Classes can encapsulate the logic and provide a clean and reusable way to implement utility functions throughout an application.
+5. Building APIs and libraries: JavaScript classes can be used to define APIs and libraries that provide functionality to other parts of an application or to external developers. Classes can encapsulate complex logic, provide clear interfaces, and offer a convenient way for other developers to interact with the API or library.
+6. Implementing design patterns: JavaScript classes can be used to implement various design patterns, such as the Singleton pattern, Factory pattern, or Observer pattern, which are common patterns used in software development to solve specific problems. Classes can provide a structured and organized way to implement these patterns.
+
+In summary, JavaScript classes are used in scenarios where there is a need for reusable, organized, and structured code to create objects with similar properties and behavior, manage application state, implement utility functions, build APIs and libraries, and implement design patterns. Classes in JavaScript provide a powerful tool for object-oriented programming, allowing developers to write more modular, maintainable, and scalable code.
 
 
