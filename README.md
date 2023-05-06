@@ -5,7 +5,7 @@
 # 40 JavaScript Essential Concepts (Updating the repo everyday)
 
 
-For anyone starting with Web Development, It is important to know the basics of JavaScript, but it can be confusing to figure out just where to start. That’s where this repository comes in. This repo will explain 40 of the most essential concepts that every developer should know to become a successful Javascript programmer. From data types and variables to functions and classes, this repository will cover the key concepts that one needs to know in order to master Javascript. 
+If you're starting to learn Web Development, it's important to know the basics of JavaScript, but it can be hard to know where to start. That's where this collection of information comes in handy. This collection explains 40 of the most important concepts you need to know to become a good JavaScript programmer. It covers things like data types, variables, functions, and classes. If you understand these concepts, you'll be well on your way to mastering JavaScript.
 
 Every concept covered in this repo has an Instagram Reel, please click on 🎬 in every heading.
 
