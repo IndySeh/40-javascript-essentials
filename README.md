@@ -38,6 +38,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Rest Parameters in JavaScript](#rest)
 * [Rest Parameters in JavaScript](#rest)
 * [JavaScript Classes](#classes)
+* [Class Inheritance JavaScript Classes](#inheritance)
 
 
 
@@ -1517,5 +1518,59 @@ JavaScript classes are used in various scenarios where object-oriented programmi
 6. Implementing design patterns: JavaScript classes can be used to implement various design patterns, such as the Singleton pattern, Factory pattern, or Observer pattern, which are common patterns used in software development to solve specific problems. Classes can provide a structured and organized way to implement these patterns.
 
 In summary, JavaScript classes are used in scenarios where there is a need for reusable, organized, and structured code to create objects with similar properties and behavior, manage application state, implement utility functions, build APIs and libraries, and implement design patterns. Classes in JavaScript provide a powerful tool for object-oriented programming, allowing developers to write more modular, maintainable, and scalable code.
+
+
+
+## <a name='inheritance'>Class Inheritance in JavaScript</a> <a href='https://www.instagram.com/reel/Cr4jgM6K76B/?igshid=YmMyMTA2M2Y='>🎬</a>
+- Class inheritance is a concept in programming that allows you to create new classes based on existing ones. 
+- It's like creating a new type of animal by taking the characteristics of an existing one and modifying them. 
+- For example, let's say you have a class called **"Animal"** that has some properties like "name" and "age", as well as some methods like "eat" and "sleep". You can create a new class called **"Dog"** that inherits from **"Animal"** and adds some new properties and methods specific to dogs, such as "breed" and "bark". 
+
+```js
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  eat() {
+    console.log(`${this.name} is eating`);
+  }
+  
+  sleep() {
+    console.log(`${this.name} is sleeping`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, age, breed) {
+    super(name, age);
+    this.breed = breed;
+  }
+  
+  bark() {
+    console.log(`${this.name} is barking`);
+  }
+}
+
+let myDog = new Dog("Rufus", 3, "Labrador");
+console.log(myDog.name); // "Rufus"
+console.log(myDog.age); // 3
+console.log(myDog.breed); // "Labrador"
+myDog.eat(); // "Rufus is eating"
+myDog.sleep(); // "Rufus is sleeping"
+myDog.bark(); // "Rufus is barking"
+```
+- In this example, we created a new class called **"Dog"** that extends the **"Animal"** class. The **"Dog"** class has a constructor that takes a name, age, and breed, and it calls the **"Animal"** constructor using the **"super"** keyword to set the name and age properties. It also has a new method called "bark" that prints out a message.
+
+
+Using class inheritance can solve several problems in programming, such as:
+
+- **Code Reusability:** By inheriting from an existing class, you can reuse code that has already been written and tested, rather than writing it from scratch. This can save time and reduce the chances of introducing bugs.
+
+- **Modularity:** Inheritance allows you to create modular code by organizing related classes into a hierarchy of inheritance. This can help to simplify the management of code and make it easier to maintain and modify.
+
+
+- **Polymorphism:** Inheritance enables polymorphism, which allows objects of different classes to be treated as if they were of the same type. This can be useful for creating flexible and extensible code.
 
 
