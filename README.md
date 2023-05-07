@@ -39,6 +39,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [Rest Parameters in JavaScript](#rest)
 * [JavaScript Classes](#classes)
 * [Class Inheritance JavaScript Classes](#inheritance)
+* [Encapsulation in JavaScript](#encapsulation)
 
 
 
@@ -1572,5 +1573,60 @@ Using class inheritance can solve several problems in programming, such as:
 
 
 - **Polymorphism:** Inheritance enables polymorphism, which allows objects of different classes to be treated as if they were of the same type. This can be useful for creating flexible and extensible code.
+
+
+
+## <a name='encapsulation'>Encapsulation in JavaScript</a> <a href='https://www.instagram.com/reel/Cr7a2XFgxiB/?igshid=NTc4MTIwNjQ2YQ=='>🎬</a>
+- Imagine you have a toy box with different compartments for different toys. The toy box protects your toys from getting lost or damaged, and you can only access your toys through the compartments. That's what encapsulation does in programming.
+- Encapsulation in JavaScript means that we can protect our data and code from being accessed or changed directly by other parts of our program. 
+- We achieve this by creating a "box" around our code and data that we only allow specific parts of our program to access.
+
+
+
+```javascript
+class BankAccount {
+  constructor(initialBalance) {
+    let balance = initialBalance;
+    
+    this.deposit = function(amount) {
+      balance += amount;
+    };
+
+    this.withdraw = function(amount) {
+      if (balance >= amount) {
+        balance -= amount;
+        return amount;
+      } else {
+        return "Insufficient funds";
+      }
+    };
+    
+    this.getBalance = function() {
+      return balance;
+    };
+  }
+}
+```
+
+
+```js
+const account = new BankAccount(1000);
+account.deposit(500);
+console.log(account.getBalance()); 
+// Output: 1500
+account.withdraw(2000);
+console.log(account.getBalance());
+// Output: Insufficient funds
+```
+
+- In this example, we have a `BankAccount` class that has three methods: `deposit`, `withdraw`, and `getBalance`. These methods all have access to a `balance` variable, but that variable is not accessible outside of the class. This means that the balance cannot be changed directly from outside of the class, protecting it from accidental or malicious changes.
+
+#### Encapsulation scenarios
+
+- Encapsulation is useful in scenarios where we want to protect our data from being changed directly, as well as in situations where we want to control how our data is accessed. 
+
+- For example, a user account system might use encapsulation to protect user data such as passwords and personal information from being accessed or changed by unauthorized parties. 
+
+- Another example might be a game object that uses encapsulation to protect its internal state and only expose certain properties or methods for other game objects to interact with.
 
 
