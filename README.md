@@ -40,6 +40,7 @@ Every concept covered in this repo has an Instagram Reel, please click on 🎬 i
 * [JavaScript Classes](#classes)
 * [Class Inheritance JavaScript Classes](#inheritance)
 * [Encapsulation in JavaScript](#encapsulation)
+* [Factory Functions in JavaScript](#factory)
 
 
 
@@ -1628,5 +1629,55 @@ console.log(account.getBalance());
 - For example, a user account system might use encapsulation to protect user data such as passwords and personal information from being accessed or changed by unauthorized parties. 
 
 - Another example might be a game object that uses encapsulation to protect its internal state and only expose certain properties or methods for other game objects to interact with.
+
+
+
+## <a name='factory'>Factory Function in JS</a> <a href='https://www.instagram.com/reel/CskYxxRI0wj/?igshid=MzRlODBiNWFlZA=='>🎬</a>
+
+- Imagine you want to create multiple cars in a game. Each car should have its own properties, like **color, speed, and model**. Instead of creating each car manually, a factory function helps us create cars easily.
+- Let's create a factory function called "createCar" that takes in the color, speed, and model of a car as parameters. Inside the function, we'll create a new object and set its properties based on the parameters we received. Finally, we'll return this new car object.
+
+```javascript
+function createCar(color, speed, model) {
+  const car = {}; // Create a new object
+
+  // Set the properties of the car object
+  car.color = color;
+  car.speed = speed;
+  car.model = model;
+
+  // Return the car object
+  return car;
+}
+
+// Now, let's create two cars 
+
+const car1 = 
+      createCar("blue", 200, "Sedan");
+const car2 = 
+      createCar("red", 180, "Sports Car");
+
+console.log(car1); 
+// { color: 'blue', speed: 200, model: 'Sedan' }
+console.log(car2);
+// { color: 'red', speed: 180, model: 'Sports Car' }
+```
+
+- In this example, we defined a factory function called "createCar" that takes three parameters: color, speed, and model. Inside the function, we created a new object called "car" and set its properties based on the parameters. Then, we returned the car object.
+- Using this factory function, we can easily create multiple cars by calling the function with different parameters. We created two cars, car1 and car2, with different colors, speeds, and models.
+
+**Difference** between **factory functions and classes**. 
+
+- In JavaScript, classes are another way to create objects with similar properties and methods. 
+- While factory functions create objects directly and assign their properties individually, classes provide a blueprint for creating objects.
+-  Classes allow you to define methods that can be shared among all objects created from the class. This makes it easier to manage and organize code when you have many objects with similar behaviors.
+
+
+#### Why use factory functions?
+
+- factory functions are more flexible and lightweight. They allow you to create objects without the need for a constructor or prototypes. Factory functions are suitable when you want to create multiple objects with their own unique properties, without the need for shared methods.
+
+- Here's a rule of thumb: if you need to create multiple objects with similar properties but different behaviors, factory functions are a good choice. If you want to create objects with shared behaviors and properties, classes are a better fit.
+
 
 
